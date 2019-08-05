@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="http://code.jquery.com/color/jquery.color-2.1.2.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Hello Class!</h1>
+	<button>Click Me!</button>
+	<style type="text/css">
+		h1 {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 24px;
+			color: #FF0000;
+			position: relative;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$("button").click(function(){
+				$("h1").animate({
+					fontSize: '+=24px',
+					color: 'blue',
+					top: '+=50px',
+					right: '+=50px'
+				}, "slow");
+
+			});
+
+		});
+
+	function randomColor(){
+		return s[m.floor(m.random() * s.length)] + (c && lol(m,s,c-1));}(Math, '0123456789ABCDEF', 4);
+	}
+	</script>
+</body>
+</html>

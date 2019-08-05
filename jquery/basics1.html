@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQUERY</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="basics1.css">
+</head>
+<body>
+	<section id="red"></section>
+	<section id="blue"></section>
+	<section id="yellow"></section>
+	<section id="green"></section>
+	<br>
+	<button onclick="Fade()">Fade Out</button>
+	<button onclick="FadeIn()">Fade In</button>
+	<button onclick="Greenbutton()" id="grnButton">Green button</button>
+
+	<script type="text/javascript">
+		function Fade(){
+			$("section").fadeOut();
+		}
+		function FadeIn(){
+			$("section").fadeIn();
+		}
+
+		$(document).ready(function(){
+			$("#grnButton").click(function(){
+				$("#green").fadeOut();
+			});
+			
+		});
+		
+	</script>
+	<!--exercise 1-->
+	<nav id="topNav"> 
+		<form>
+		<input type=”text” /> 
+		<input type="button" id="button" value="Click Me">
+		</form>
+		<ol class="article"> 
+			<li>Menu 1</li> 
+			<li>Menu 2</li>
+		</ol> 
+	</nav>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("li").click(function(){
+				$(".article").fadeOut();
+			});
+			$(":button").click(function(){
+				$("#topNav").fadeOut();
+			});
+		});
+	</script>
+
+	<!--exercise2 hide odd rows on table-->
+	<table id="table">
+		<th>header</th>
+		<tr>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>6</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$("tr:odd").hide();
+		});
+	</script>
+
+	
+</body>
+</html>

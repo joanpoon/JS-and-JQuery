@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQUERY fade out</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body> 
+	<section>
+		<br/>
+		<strong>Hello!</strong>
+	</section>
+	<script type="text/javascript">
+		$(document).ready(function(){ 
+			$('section').mouseenter(function(){
+				$('section').fadeTo('slow',1); 
+			});
+			$('section').mouseleave(function(){
+				$('section').fadeTo('fast',0.5);
+			}); });
+	</script>
+	<style type="text/css">
+		section {
+			height: 60px;
+			width: 100px;
+			border-radius: 5px;
+			background-color: blue;
+			text-align: center;
+			color: white;
+			font-family: Verdana, Arial, Sans-Serif;
+			opacity: 0.5;}
+	</style>
+
+	<!-- exercise 2: make it hide-->
+	<p>Hello</p>
+	<style type="text/css">
+		p {height: 100px;width: 100px; background-color: red; color: white; border-radius: 5px;}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("p").click(function(){
+				$("p").hide();
+			});
+		});
+	</script>
+</body>
+</html>

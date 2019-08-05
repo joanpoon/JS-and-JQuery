@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>Event listener ON()</title>
+</head>
+<body>
+	<input id="input" value="Cool Stuff" type="text">
+	<h1>Cool Stuff</h1>
+	<p>Write something in the input field, and then press enter or click outside the field.</p>
+	<script type="text/javascript">
+		$(document).ready(function(){ 
+			$('#input').on('change', function() {
+				$("h1").text($(this).val());
+			}); 
+
+		});
+	</script>
+
+
+	<!--each()-->
+	<section><br/><p>Hello!</p></section><p>This is some text.</p> <p>This is some more text.</p><
+	
+	<style type="text/css">
+		section {height: 60px; width: 100px; border-radius: 5px;background-color: blue; color: white;text-align: center;font-family: Verdana, Arial, Sans-Serif;opacity: 0.5; }
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){ 
+			$('p').each(function(){
+				$(this).append(" - " + $(this).text().length);
+			});
+		});
+	</script>
+</body>
+</html>

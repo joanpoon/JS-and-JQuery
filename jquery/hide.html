@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<!-- slide up-->
+	<h1>Heading -1</h1>
+	<h2>Heading -2</h2>
+	<h3>Heading -3</h3>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("h1,h2,h3").click(function(){
+				$(this).slideUp();
+				});
+		});
+	</script>
+
+	<style type="text/css">
+		section {height: 50px;width: 50px; border-radius: 100%; background-color: blue; display: inline-block;}
+	</style>
+	<section></section>
+	<section></section>
+	<section></section>
+	<section></section>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("section").mouseenter(function(){
+				$(this).fadeTo('fast',1);
+			});
+			$("section").mouseleave(function(){
+				$(this).fadeTo('fast',0.5);
+			});
+		});
+	</script>
+
+	<br>
+	<!--change the link-->
+	<a href=”http://www.lwtech.edu”>LW Tech</a>
+	<button>Change the Link</button><br><br>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("a").attr("href","http://google.com").text("Google!");
+			})
+		});
+	</script>
+	<br>
+
+	<!--to do list-->
+	<input type="text" name="listItems" id="listItems" /> <br>
+	<button id="end">Add List Item to end</button> 
+	<button id="begin">Add List item to beginning</button>
+	<button id="duplicate">Duplicate list</button>
+	<button id="redup">Remove duplicate list</button>
+	<button id="reori">Clear all list</button>
+	<br>
+	<ul id="mainList">
+		
+	</ul> 
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#end").click(function(){
+				$("#mainList").append("<li>"+$("#listItems").val() + "</li>");
+			});
+			$("#begin").click(function(){
+				$("#mainList").prepend("<li>"+$("#listItems").val() + "</li>");
+			});
+			$("#duplicate").click(function(){
+				$("#mainList").after("<ul id='duplicated'>" +$("#mainList").html()+"</ul>");
+			});
+			$("#redup").click(function(){
+				$("#duplicated").remove();
+			});
+			$("#reori").click(function(){
+				$("ul").empty();
+			});
+		})
+	</script>
+
+
+</body>
+</html>

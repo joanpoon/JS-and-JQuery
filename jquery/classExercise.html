@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title></title>
+</head>
+<body>
+	<p id="one" class="highlighted">I'm highlighted!</p> 
+	<p id="two">Highlight me, too!</p>
+	<p id="color">Double-click here to change the background color.</p>
+	<style type="text/css">
+		#one {background-color: red; border-radius: 5px; text-align: center;font-family: Verdana, Arial, Sans-Serif; color: white;width: 200px; height: 25px;}#two {background-color: red; border-radius: 5px; text-align: center;font-family: Vivaldi, Cursive; color: white; width: 200px; height: 25px;}.highlighted {box-shadow: 0 0 8px blue; cursor:pointer; }
+		.dbl { background-color: yellow; color: black;}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#two").click(function(){
+				$(this).toggleClass("highlighted");
+			});
+			$("#color").dblclick(function(){
+				$(this).toggleClass("dbl");
+			});
+		});
+	</script>
+</body>
+</html>
