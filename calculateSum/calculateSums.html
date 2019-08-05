@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Joan Poon, Assignment 2, Calculate sums-->
+	<title>Calculate Sums</title>
+	<script type="text/javascript" src="calculateSums.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		document.write("Is the sum of positive numbers greater than/equal to the sum of negative numbers?" + "<br><br>");
+		document.write("The result is: " + calculateSums([-1,2]) + "<br><br>"); //1
+		document.write("The result is: " + calculateSums([-1,2,-3]) + "<br><br>"); //2
+		document.write("The result is: " + calculateSums([-5,1,3,-8]) + "<br><br>"); //3
+		document.write("The result is: " + calculateSums([-12,40,-20,5]) + "<br><br>"); //4
+		document.write("The result is: " + calculateSums([-2,-3,-4,10]) + "<br><br>"); //5
+
+		/* Full program testing
+		1.	Testing array[-1,2]. I expected the screan to print out:
+			The array of numebers:-1,2
+			The result is: true
+			Result confirmed.
+
+		2.	Testing array[-1,2,-3]. I expected the screan to print out:
+			The array of numebers:-1,2,-3
+			The result is: false
+			Result confirmed.
+
+		3.	Testing array[-5,1,3,-8]. I expected the screan to print out:
+			The array of numebers:-5,1,3,-8
+			The result is: false
+			Result confirmed.
+
+		4.	Testing array[-12,40,-20,5]. I expected the screan to print out:
+			The array of numebers:-12,40,-20,5
+			The result is: true
+			Result confirmed.
+
+		5.	Testing array[-2,-3,-4,10]. I expected the screan to print out:
+			The array of numebers:-2,-3,-4,10
+			The result is: true
+			Result confirmed.
+		*/
+	</script>
+</body>
+</html>

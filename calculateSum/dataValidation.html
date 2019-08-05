@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Yee Sin Joan Poon, Assignment 2, Data Validation-->
+	<title>Data Validation</title>
+	<script type="text/javascript" src="dataValidation.js"></script>
+</head>
+<body>
+	<form name="form1" id="form1">
+		<label for="name">Full Name: (must be greater than 2 character) </label>
+		<input name="name" id="name" type="text" size="30"><br><br>
+
+		<label for="integer1">Integer 1: (must be an integer between 1 and 100) </label>
+		<input type="text" name="integer1" id="integer1" size="10"><br><br>
+
+		<label for="integer2">Integer 2: (must be an integer between 50 and 150) </label>
+		<input type="text" name="integer2" id="integer2" size="10"><br><br>
+
+		<label for="number3">Number 3: (must be negative and allows for decimal) </label>
+		<input type="text" name="number3" id="number3" size="10"><br><br>
+
+		<label for="number4">Number 4: (any number, positive or negative) </label>
+		<input type="text" name="number4" id="number4" size="10"><br><br>
+
+		<label for="number5">Number 5: (any number, positive or negative) </label>
+		<input type="text" name="number5" id="number5" size="10"><br><br>
+		
+		<!--When user click submit, function validateForm() will run-->
+		<input type="button" name="submit" id="submit" value="Submit!" onclick="validateForm()">
+		<input type="reset" value="Reset form"><br><br>
+
+		<label for "outputHere">Output:</label><br>
+		<textarea name="outputHere" id="outputHere" readonly="readonly" style="height:200px;width:400px;"></textarea><br>
+
+	</form>
+
+</body>
+</html>
